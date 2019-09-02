@@ -1,9 +1,6 @@
 import com.mongodb.*;
-import javafx.scene.control.Alert;
 
 import java.net.UnknownHostException;
-import java.util.Dictionary;
-import java.util.HashMap;
 import java.util.Optional;
 
 public class Database {
@@ -71,6 +68,8 @@ public class Database {
 			DateFormatter dateFormatter = new DateFormatter(users.get(key).toString());
 
 			if(users.get("gender").toString().equals("Homme")){
+				System.out.println("date"+dateFormatter.returnAgeFormStringDate());
+
 				averageAge[1] += dateFormatter.returnAgeFormStringDate();
 				counterMan++;
 
@@ -80,7 +79,6 @@ public class Database {
 			}
 			averageAge[0] += dateFormatter.returnAgeFormStringDate();
 		}
-
 		averageAge[0] /= (counterMan + counterWoman);
 		averageAge[1] /= counterMan;
 		averageAge[2] /= counterWoman;

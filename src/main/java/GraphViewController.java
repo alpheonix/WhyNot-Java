@@ -171,7 +171,7 @@ public class GraphViewController implements Initializable {
 	}
 
 	private void AverageAgeBarCharts(double[] averageAge) {
-
+		System.out.println(averageAge);
 		CategoryAxis xAxis = new CategoryAxis();
 		xAxis.setLabel("gender");
 
